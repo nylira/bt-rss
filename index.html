@@ -33,7 +33,6 @@
           $(this).parents('dd.details').toggleClass('show')
             .prev('dt.torrent').removeClass('active');
         });
-
       });
 
       // Scroll to top
@@ -46,15 +45,13 @@
   
   <script id="torrentData" type="text/html">
     <dt class="torrent">
-      <div class="content">
-        <p class="title">${(title).substring(0,29)}</p>
-        <p class="meta">${(author.name).substring(0,34)}</p>
-      </div>
+      <p class="title">${(title).substring(0,29)}</p>
+      <p class="meta">${(author.name).substring(0,34)}</p>
     </dt>
 
     <dd class="torrent details">
       <div class="header">
-        <p class="title">Torrent Details</p>
+        <p class="author">Torrent by ${author.name}</p>
         <p class="close"><a>Close</a></p>
       </div>
 
@@ -66,19 +63,23 @@
       <div class="meta">
         <p class="time">${(published).substring(0,10)}</p>
         <p class="download"><a href="${link[1].href}">Download</a></p>
+
         <dl class="specs">
           {{if format.size != null}}
             <dt>Size</dt>
-            <dd>${Math.round(format.size / 1024 / 1024)} MB</dd>
+            <dd class="size">${Math.round(format.size / 1024 / 1024)} MB</dd>
           {{/if}}
-          {{if format.width != null}}
-            <dt>Resolution</dt>
-            <dd>${format.width} &times; ${format.height} (${format.pixel_aspect_ratio})</dd>
-          {{/if}}
+
           {{if format.duration != null}}
             <dt>Duration</dt>
-            <dd>${Math.round(format.duration / 60)} min.</dd>
+            <dd class="duration">${Math.round(format.duration / 60)} min.</dd>
           {{/if}}
+
+          {{if format.width != null}}
+            <dt>Resolution</dt>
+            <dd class="resolution" title="${format.pixel_aspect_ratio}">${format.width} &times; ${format.height}</dd>
+          {{/if}}
+
           {{if format.video_bitrate != null}}
             <dt>Video</dt>
             <dd>
@@ -89,6 +90,7 @@
               ${format.video_codec}
           </dd>
           {{/if}}
+
           {{if format.audio_bitrate != null}}
             <dt>Audio</dt>
             <dd>
@@ -97,6 +99,7 @@
               ${Math.round(format.samplerate)} Hz
             </dd>
           {{/if}}
+
           {{if 2 == 4}}
             <dt>xmlns</dt>
             <dd>${format.xmlns}</dd>

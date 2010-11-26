@@ -23,7 +23,7 @@
 
 dl.torrents
   dt.torrent
-    padding: .75em 0
+    padding: .75em 1em
     border-top: 1px solid $w80
     border-bottom: 1px solid $b14
     +clear
@@ -39,18 +39,12 @@ dl.torrents
       &:hover
         p.title
           color: #444 !important
-    img.thumb
-      float: left
-      margin-right: 1em
-
-    .content
-      padding: 0 1em
-      p
-        &.title
-          color: #444
-        &.meta
-          +font(85%)
-          color: #999
+    p
+      &.title
+        color: #444
+      &.meta
+        +font(85%)
+        color: #999
   
   dd.torrent.details
     display: block
@@ -70,7 +64,7 @@ dl.torrents
       height: 5em
       padding: 1em 2em 1em 3em
       border-bottom: 1px solid #ddd
-      p.title
+      p.author
         +col($s7 - 3*$m)
         line-height: 1
         color: #999
@@ -90,12 +84,17 @@ dl.torrents
       br
         display: none
       p
-        margin: 0 0 .5em
+        margin: 0 0 1em
       h2
         +font(150%)
-        margin: $m 0 .5*$m
+        color: #999
+        border-bottom: 1px dashed #ddd
+        margin: 2*$m 0 $m
       h3
-        margin: $m 0 .5*$m
+        margin: 2*$m 0 $m
+        text-transform: uppercase
+        letter-spacing: 2px
+        color: #999
         
     .meta
       float: left
@@ -107,9 +106,19 @@ dl.torrents
         margin: 0 0 2em
 
       p.download
-        margin: 0 0 1.5em
+        margin: 0 0 2em
+        +bg-linear-gradient(rgb(120,230,0),rgb(89,170,0))
+        border: 1px solid rgba(35,150,0,.7)
+        +border-radius
+        +box-shadow
         a
-          @extend .button
+          display: block
+          font: bold 150%/2 $sans
+          color: #fff
+          text-align: center
+          text-shadow: $b40 0 0 3px
+          border: 1px solid $w20
+          +border-radius(4px)
 
       dl.specs
         dt
@@ -118,8 +127,16 @@ dl.torrents
           font-size: 11px
           color: #999
         dd
-          padding: 0 0 1em
+          margin: 0 0 1em
 
+          &.size, &.resolution, &.duration
+            font: bold 150%/2 $sans
+            color: hsl($hue,100,95)
+            text-align: center
+            +text-stroke
+            background: $link
+            +border-radius
+        
 .site.footer
   +bg-linear-gradient($m250,$m230)
   border-right: 1px solid #ddd
