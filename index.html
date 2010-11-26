@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr" class="no-js">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <title>vodo.net rss</title>
@@ -7,7 +7,6 @@
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript"  src="js/jquery.tmpl.js"></script>
-  <script type="text/javascript"  src="js/jquery.timeago.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
@@ -40,9 +39,8 @@
     <dt class="torrent">
       <div class="content">
         <p class="title">${title}</p>
-        <p class="author">${author.name}</p>
+        <p class="meta">${(published).substring(0,10)} ${author.name}</p>
       </div>
-      <p class="published">${published}</p>
     </dt>
 
     <dd class="torrent details">
@@ -57,42 +55,47 @@
         {{html content.content}}
       </div>
 
-      <dl class="specs">
-        {{if format.size != null}}
-          <dt>Size</dt>
-          <dd>${Math.round(format.size / 1024 / 1024)} MB</dd>
-        {{/if}}
-        {{if format.width != null}}
-          <dt>Resolution</dt>
-          <dd>${format.width} &times; ${format.height} (${format.pixel_aspect_ratio})</dd>
-        {{/if}}
-        {{if format.duration != null}}
-          <dt>Duration</dt>
-          <dd>${Math.round(format.duration / 60)} min.</dd>
-        {{/if}}
-        {{if format.video_bitrate != null}}
-          <dt>Video</dt>
-          <dd>
-            ${Math.round(format.video_bitrate)} kB/s
-            {{if format.framerate != null}}
-              ${Math.round(format.framerate)} fps
-            {{/if}}
-            ${format.video_codec}
-        </dd>
-        {{/if}}
-        {{if format.audio_bitrate != null}}
-          <dt>Audio</dt>
-          <dd>
-            ${format.audio_codec}
-            ${Math.round(format.audio_bitrate)} Kb/s
-            ${Math.round(format.samplerate)} Hz
+      <div class="meta">
+        <p class="download">
+          <a href="${link[1].href}">Download</a>
+        </p>
+        <dl class="specs">
+          {{if format.size != null}}
+            <dt>Size</dt>
+            <dd>${Math.round(format.size / 1024 / 1024)} MB</dd>
+          {{/if}}
+          {{if format.width != null}}
+            <dt>Resolution</dt>
+            <dd>${format.width} &times; ${format.height} (${format.pixel_aspect_ratio})</dd>
+          {{/if}}
+          {{if format.duration != null}}
+            <dt>Duration</dt>
+            <dd>${Math.round(format.duration / 60)} min.</dd>
+          {{/if}}
+          {{if format.video_bitrate != null}}
+            <dt>Video</dt>
+            <dd>
+              ${Math.round(format.video_bitrate)} kB/s
+              {{if format.framerate != null}}
+                ${Math.round(format.framerate)} fps
+              {{/if}}
+              ${format.video_codec}
           </dd>
-        {{/if}}
-        {{if 2 == 4}}
-          <dt>xmlns</dt>
-          <dd>${format.xmlns}</dd>
-        {{/if}}
-      </dl>
+          {{/if}}
+          {{if format.audio_bitrate != null}}
+            <dt>Audio</dt>
+            <dd>
+              ${format.audio_codec}
+              ${Math.round(format.audio_bitrate)} Kb/s
+              ${Math.round(format.samplerate)} Hz
+            </dd>
+          {{/if}}
+          {{if 2 == 4}}
+            <dt>xmlns</dt>
+            <dd>${format.xmlns}</dd>
+          {{/if}}
+        </dl>
+      </div>
     </dd>
   </script>
 
@@ -101,7 +104,7 @@
 
 <div id="content">
   <div class="site header">
-    <h1>Vodo.net</h1>
+    <h1><a href="http://vodo.net">Vodo.net</a></h1>
   </div>
   <dl class="torrents">
   </dl>

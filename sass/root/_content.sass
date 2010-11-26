@@ -2,48 +2,50 @@
   +col($s4)
 
 .site.header
-  height: $s1
-  background: #fff
-  border-bottom: 1px solid #ddd
-  background: #eee
+  +bg-linear-gradient($m250,$m230)
+  border-right: 1px solid #ddd
+  border-bottom: 1px solid $b15
+  height: 7em
   h1
-    padding: .75em 1em
-    text-transform: lowercase
-    color: #666
+    a
+      display: block
+      padding: $m
+      height: 5*$m
+      text-transform: lowercase
+      color: #666
+      font: bold 1.5em/1 $sans
+      +text-stroke
+      text-shadow: #fff 0 1px 0
 
 dl.torrents
-  +col($s4 - 1px)
+  +col($s4)
   background: #fff
   +clear
   position: relative
-  border-right: 1px solid #ddd
   dt.torrent
     padding: .75em 0
-    border-bottom: 1px solid #ddd
+    border-top: 1px solid $w80
+    border-bottom: 1px solid $b15
     +clear
-    cursor: pointer
+    text-shadow: $w60 0 1px 0
+    +bg-linear-gradient($m240,$m230)
+    border-right: 1px solid #ddd
     &:hover
-      background: rgb(245,245,245)
     &.active
-      background: #ffe
-    
+      background: #fff
+      border-right-color: transparent
     img.thumb
       float: left
       margin-right: 1em
 
     .content
-      +col($s3 - $m)
       padding-left: 1em
       p
-      .title
-        color: $link
-
-    p.published
-      +col($s1 - 1px - $m)
-      +font(85%)
-      color: #999
-      padding-right: $m
-
+        &.title
+        &.meta
+          font-size: 85%
+          color: #888
+  
   dd.torrent.details
     display: block
     position: fixed
@@ -58,31 +60,26 @@ dl.torrents
       left: $s4
 
     .header
-      background: #eee
-      margin: 0 0 1em
-      height: $s1
+      +bg-linear-gradient($m250,$m240)
+      +clear
+      height: 5em
+      padding: 1em 2em
       border-bottom: 1px solid #ddd
       p.title
-        +col($s5 - $m)
-        padding-left: 1em
-        padding-top: .75em
+        +col($s6 - 2*$m)
+        line-height: 1
         color: #666
       p.close
-        +col($s1)
-        padding-top: .75em
+        +col($s2 - 2*$m)
         a
-          display: block
-          color: #666
-
+          @extend .button
     h1
-      +font(2em)
-      line-height: 1.2em
-      margin: 0 1em $m $m
+      font: 2em/1 $sans
+      padding: 2*$m
 
     .content
-      +col($s5)
-      padding: 0 2em 1em 1em
-      overflow-y: scroll
+      +col($s6 - 4*$m)
+      padding: 0 2em 1em
       height: 530px
       br
         display: none
@@ -95,15 +92,20 @@ dl.torrents
         margin: $m 0 .5*$m
         
 
-    dl.specs
-      +clear
-      padding: 0 1em 1em
-      +font(85%)
-      width: $s2
-      float: right
-      
-      dt
-        border-top: 1px solid #ddd
-        font-weight: bold
-      dd
-        margin: 0 0 .5em
+    .meta
+      float: left
+      width: $s2 - 2*$m
+
+      p.download
+        margin: 0 0 1em
+        a
+          @extend .button
+
+      dl.specs
+        dt
+          border-top: 1px solid #ddd
+          padding: .75em 0 0
+          font-size: 11px
+          color: #999
+        dd
+          padding: 0 0 1em
