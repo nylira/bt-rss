@@ -1,0 +1,55 @@
+div.gw-markup
+  table
+    display: block
+    +clear
+    td
+      float: left
+      margin-right: 2px
+      &.pipe
+        color: #ccc
+        padding: 0 2px
+      .icon
+        width: 16px
+        height: 16px
+        padding: 2px
+        border: 1px solid #fff
+        +border-radius(3px)
+        &:hover
+          border-color: #ccc
+          +bg-linear-gradient(#fff,$m240)
+        span
+
+textarea.gw-markup
+  font: 1em/1.5em $mono
+        
+
+.markup
+  p, ul, ol
+    margin: 0 0 1em
+    li
+      margin: 0 0 .5em
+  img
+    max-width: 100%
+    vertical-align: text-bottom
+
+  div[style="float:right;"]
+    margin: 0 0 1em 1em
+
+  div[style="float:left;"]
+    margin: 0 1em 1em 0
+
+  ul
+    list-style: disc
+
+  ol
+    list-style: decimal
+
+  h3
+    font: 1.5em/1em $sans
+    margin: 1em 0 0
+
+  blockquote
+    border-left: .3em solid #eee
+    padding-left: .5em
+    margin-left: -.8em
+    color: #666

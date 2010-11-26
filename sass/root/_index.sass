@@ -1,0 +1,41 @@
+$hue: 195
+$hue2: 8
+
+$link: hsl($hue,90,49)
+$hover: hsl($hue,100,70)
+$accent: hsl($hue2,100,45)
+
+$m: 13px
+$txt: #1b1b1b
+
+=font($size: $m)
+  font: $size $sans
+  line-height: 150%
+  color: $txt
+
+=link
+  color: $link
+  text-decoration: none
+  &:hover
+    color: $hover
+a
+  +link
+
+html
+  overflow-y: scroll
+body
+  +font
+  background: $m242
+
+#no-javascript
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  z-index: 9999
+  div.message
+    top: 35%
+    width: 100%
+    text-align: center
+    position: absolute

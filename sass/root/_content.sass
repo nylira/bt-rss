@@ -1,0 +1,21 @@
+#content
+  @extend .cnt
+
+#feed
+  width: $s6
+  background: #fff
+  +clear
+  li
+    padding: 1em
+    border-bottom: 1px solid #ddd
+    +col($s6 - 2*$m)
+    +clear
+    img.thumb
+      float: left
+      margin-right: 1em
+    a.download
+      @extend .button
+      float: left
+    p.published     
+      +font(85%)
+      color: #999
