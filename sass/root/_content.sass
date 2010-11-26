@@ -1,15 +1,22 @@
 #content
   @extend .cnt
 
-#feed
-  width: $s6
+dl.torrents
+  +col($s6)
   background: #fff
   +clear
-  li
+  position: relative
+  dt.torrent
     padding: 1em
     border-bottom: 1px solid #ddd
     +col($s6 - 2*$m)
     +clear
+    cursor: pointer
+    &:hover
+      background: #eee
+    &.active
+      background: #ffc
+    
     img.thumb
       float: left
       margin-right: 1em
@@ -19,3 +26,22 @@
     p.published     
       +font(85%)
       color: #999
+
+  dd.torrent.details
+    display: none
+    position: fixed
+    top: 1em
+    left: $s6
+    width: $s6
+    background: #fff
+    &.show
+      display: block
+    h2
+      +font(150%)
+    dl.specs
+      dt
+        +col($s2)
+        border-bottom: 1px solid #ddd
+      dd
+        +col($s4)
+        border-bottom: 1px solid #ddd
