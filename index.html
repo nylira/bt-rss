@@ -7,6 +7,7 @@
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
   <script type="text/javascript"  src="js/jquery.tmpl.js"></script>
+  <script type="text/javascript"  src="js/jquery.timeago.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
@@ -23,21 +24,28 @@
           return false;
         });
         $('dd.details .close').click(function() {
-          $(this).parent('dd.details').toggleClass('show')
+          $(this).parents('dd.details').toggleClass('show')
             .prev('dt.torrent').removeClass('active');
         });
+        $('p.published').timeago();
       });
     });
   </script>
   
   <script id="torrentData" type="text/html">
     <dt class="torrent">
-      <a href="${link[0].href}">${title}</a>
-      <p class="author">${author.name}</p>
+      <div class="content">
+        <p class="title">${title}</p>
+        <p class="author">${author.name}</p>
+      </div>
+      <p class="published">${published}</p>
     </dt>
     <dd class="torrent details">
-      <h2>${title}</h2>
-      <a class="close">Close</a>
+      <div class="header">
+        <p class="title">Torrent Details</p>
+        <p class="close"><a>Close</a></p>
+      </div>
+      <h2><a href="${link[0].href}">${title}</a></h2>
       <dl class="specs">
         <dt>Audio Bitrate</dt>
         <dd>${format.audio_bitrate}</dd>

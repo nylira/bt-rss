@@ -2,46 +2,78 @@
   @extend .cnt
 
 dl.torrents
-  +col($s6)
+  +col($s6 - 1px)
   background: #fff
   +clear
   position: relative
+  border-right: 1px solid #ddd
   dt.torrent
-    padding: 1em
+    padding: .5em 0
     border-bottom: 1px solid #ddd
-    +col($s6 - 2*$m)
     +clear
     cursor: pointer
     &:hover
-      background: #eee
+      background: rgb(245,245,245)
     &.active
-      background: #ffc
+      background: #ffd
     
     img.thumb
       float: left
       margin-right: 1em
-    a.download
-      @extend .button
-      float: left
-    p.published     
+
+    .content
+      +col($s5 - $m)
+      padding-left: 1em
+      p
+      .title
+        color: $link
+
+    p.published
+      +col($s1 - 1px - $m)
       +font(85%)
       color: #999
+      padding-right: $m
 
   dd.torrent.details
-    display: none
+    display: block
     position: fixed
-    top: 1em
-    left: $s6
+    top: 3em
+    left: 0
     width: $s6
     background: #fff
+    z-index: -3
+    +transition(left .2s ease)
     &.show
-      display: block
+      left: $s6
+
+    .header
+      background: #eee
+      margin: 0 0 1em
+      +border-radius(0 5px 0 0)
+      line-height: 2em
+      height: 2em
+      p.title
+        +col($s5 - $m)
+        padding-left: 1em
+        color: #666
+      p.close
+        +col($s1)
+        a
+          display: block
+          color: #666
+
     h2
-      +font(150%)
+      +font(2em)
+      line-height: 1.2em
+      margin: 0 $m 1em
     dl.specs
+      +clear
+      padding: 0 1em 1em
+      dd, dt
+        border-top: 1px solid #ddd
+        line-height: 1.9em
       dt
-        +col($s2)
-        border-bottom: 1px solid #ddd
+        +col($s2 - $m)
+        clear: left
       dd
-        +col($s4)
-        border-bottom: 1px solid #ddd
+        +col($s4 - $m)
