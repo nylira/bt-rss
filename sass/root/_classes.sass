@@ -1,10 +1,6 @@
 =gradient
   +bg-linear-gradient(hsl($hue,90,50),hsl($hue,90,40))
 
-=grad-dark
-  background: transparent
-  +bg-linear-gradient(#fff,$m240)
-
 =icon($i: search)
   position: relative
   &:after
@@ -41,25 +37,6 @@
   cursor: pointer
   &:hover
     opacity: 1
-
-.crumb
-  margin: 0 1em
-  float: left
-  li
-    display: inline
-    line-height: 3*$m
-    font-size: 11px
-    color: #666
-    &:not(:last-of-type):after
-      content: "\0020\00BB\0020"
-      text-align: center
-      width: 3em
-    h2
-      font-weight: normal
-    a
-      color: #666
-      &:hover
-        text-decoration: underline
 
 .button
   display: block
@@ -134,58 +111,3 @@
     border-color: #fff
     +bg-linear-gradient($m255,$m230)
     +box-shadow(#000 0 0 1px)
-    color: $accent
-
-.paginator
-  padding: 1em $gut
-  +bg-linear-gradient(#fff,#eee)
-  +border-radius(4px)
-  div.pagination
-    display: inline-block
-    text-align: center
-    height: 4em
-    span
-      color: #666
-    a.pagination-page, span.pagination-page-selected, a.pagination-next, a.pagination-previous
-      display: block
-      float: left
-      width: $s1 / 2 - 2px
-      border-right: 1px solid $w50
-      border-left: 1px solid $b10
-      text-align: center
-      font-weight: bold
-      line-height: 4em
-      &:nth-child(1)
-        border-left: none
-      &:nth-child(n)
-        border-right: none
-
-.box
-  background: #fff
-  +border-radius
-  +box-shadow
-
-.box-top
-  height: 3em
-  line-height: 3em
-  +bg-linear-gradient($m255,$m240)
-  border-bottom: 1px solid #ddd
-  +border-radius(4px 4px 0 0)
-
-  h2
-    display: inline
-    font: bold 1em/3em $sans
-    color: #666
-
-  .nav.admin
-    float: right
-    margin-right: 1em
-    margin-top: .8em
-    ul
-      li
-        float: left
-        margin-left: 2px
-        a
-          @extend .button-invis
-          font-size: 11px
-          color: #666

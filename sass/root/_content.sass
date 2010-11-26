@@ -12,10 +12,14 @@
       padding: $m
       height: 5*$m
       text-transform: lowercase
-      color: #666
-      font: bold 1.5em/1 $sans
+      color: #999
+      font: 3em/1.5 $sans
+      letter-spacing: 1px
       +text-stroke
-      text-shadow: #fff 0 1px 0
+      text-shadow: $w50 0 2px 0
+      text-align: center
+      &:hover
+        color: $link
 
 dl.torrents
   +col($s4)
@@ -25,15 +29,20 @@ dl.torrents
   dt.torrent
     padding: .75em 0
     border-top: 1px solid $w80
-    border-bottom: 1px solid $b15
+    border-bottom: 1px solid $b14
     +clear
     text-shadow: $w60 0 1px 0
-    +bg-linear-gradient($m240,$m230)
+    +bg-linear-gradient($m243,$m232)
     border-right: 1px solid #ddd
     &:hover
+      p.title
+        color: $link !important
     &.active
       background: #fff
       border-right-color: transparent
+      &:hover
+        p.title
+          color: #444 !important
     img.thumb
       float: left
       margin-right: 1em
@@ -42,9 +51,10 @@ dl.torrents
       padding-left: 1em
       p
         &.title
+          color: #444
         &.meta
           font-size: 85%
-          color: #888
+          color: #999
   
   dd.torrent.details
     display: block
