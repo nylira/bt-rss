@@ -1,28 +1,38 @@
 #content
-  @extend .cnt
+  +col($s4)
+
+.site.header
+  height: $s1
+  background: #fff
+  border-bottom: 1px solid #ddd
+  background: #eee
+  h1
+    padding: .75em 1em
+    text-transform: lowercase
+    color: #666
 
 dl.torrents
-  +col($s6 - 1px)
+  +col($s4 - 1px)
   background: #fff
   +clear
   position: relative
   border-right: 1px solid #ddd
   dt.torrent
-    padding: .5em 0
+    padding: .75em 0
     border-bottom: 1px solid #ddd
     +clear
     cursor: pointer
     &:hover
       background: rgb(245,245,245)
     &.active
-      background: #ffd
+      background: #ffe
     
     img.thumb
       float: left
       margin-right: 1em
 
     .content
-      +col($s5 - $m)
+      +col($s3 - $m)
       padding-left: 1em
       p
       .title
@@ -37,43 +47,63 @@ dl.torrents
   dd.torrent.details
     display: block
     position: fixed
-    top: 3em
-    left: 0
-    width: $s6
+    min-height: 100%
+    top: 0
+    left: -$s4
+    width: $s8
     background: #fff
     z-index: -3
     +transition(left .2s ease)
     &.show
-      left: $s6
+      left: $s4
 
     .header
       background: #eee
       margin: 0 0 1em
-      +border-radius(0 5px 0 0)
-      line-height: 2em
-      height: 2em
+      height: $s1
+      border-bottom: 1px solid #ddd
       p.title
         +col($s5 - $m)
         padding-left: 1em
+        padding-top: .75em
         color: #666
       p.close
         +col($s1)
+        padding-top: .75em
         a
           display: block
           color: #666
 
-    h2
+    h1
       +font(2em)
       line-height: 1.2em
-      margin: 0 $m 1em
+      margin: 0 1em $m $m
+
+    .content
+      +col($s5)
+      padding: 0 2em 1em 1em
+      overflow-y: scroll
+      height: 530px
+      br
+        display: none
+      p
+        margin: 0 0 .5em
+      h2
+        +font(150%)
+        margin: $m 0 .5*$m
+      h3
+        margin: $m 0 .5*$m
+        
+
     dl.specs
       +clear
       padding: 0 1em 1em
-      dd, dt
-        border-top: 1px solid #ddd
-        line-height: 1.9em
+      +font(85%)
+      width: $s2
+      float: right
+      
       dt
-        +col($s2 - $m)
-        clear: left
+        border-top: 1px solid #ddd
+        font-weight: bold
       dd
-        +col($s4 - $m)
+        margin: 0 0 .5em

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
 <head>
   <meta charset="utf-8" />
-  <title>Nylira</title>
+  <title>vodo.net rss</title>
   <link type="text/css" rel="stylesheet" href="css/screen.css" />
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -16,6 +16,10 @@
         $.each(data.value.items[0].entry, function(i,entry){
           $('#torrentData').tmpl(entry).appendTo('dl.torrents');
         });
+
+        $('dl.torrents dt.torrent:first').addClass('active');
+        $('dl.torrents dd.torrent:first').addClass('show');
+
         $('dt.torrent').click(function() {
           $(this).toggleClass('active');
           $(this).next('dd.details').toggleClass('show')
@@ -40,37 +44,54 @@
       </div>
       <p class="published">${published}</p>
     </dt>
+
     <dd class="torrent details">
       <div class="header">
         <p class="title">Torrent Details</p>
         <p class="close"><a>Close</a></p>
       </div>
-      <h2><a href="${link[0].href}">${title}</a></h2>
+
+      <h1><a href="${link[0].href}">${title}</a></h1>
+
+      <div class="content">
+        {{html content.content}}
+      </div>
+
       <dl class="specs">
-        <dt>Audio Bitrate</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Width</dt>
-        <dd>${format.width}</dd>
-        <dt>xmlns</dt>
-        <dd>${format.xmlns}</dd>
-        <dt>Sample Rate</dt>
-        <dd>${format.samplerate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
-        <dt>Audio</dt>
-        <dd>${format.audio_bitrate}</dd>
+        {{if format.size != null}}
+          <dt>Size</dt>
+          <dd>${Math.round(format.size / 1024 / 1024)} MB</dd>
+        {{/if}}
+        {{if format.width != null}}
+          <dt>Resolution</dt>
+          <dd>${format.width} &times; ${format.height} (${format.pixel_aspect_ratio})</dd>
+        {{/if}}
+        {{if format.duration != null}}
+          <dt>Duration</dt>
+          <dd>${Math.round(format.duration / 60)} min.</dd>
+        {{/if}}
+        {{if format.video_bitrate != null}}
+          <dt>Video</dt>
+          <dd>
+            ${Math.round(format.video_bitrate)} kB/s
+            {{if format.framerate != null}}
+              ${Math.round(format.framerate)} fps
+            {{/if}}
+            ${format.video_codec}
+        </dd>
+        {{/if}}
+        {{if format.audio_bitrate != null}}
+          <dt>Audio</dt>
+          <dd>
+            ${format.audio_codec}
+            ${Math.round(format.audio_bitrate)} Kb/s
+            ${Math.round(format.samplerate)} Hz
+          </dd>
+        {{/if}}
+        {{if 2 == 4}}
+          <dt>xmlns</dt>
+          <dd>${format.xmlns}</dd>
+        {{/if}}
       </dl>
     </dd>
   </script>
@@ -78,9 +99,14 @@
 </head>
 <body>
 
-<dl class="torrents">
-</dl>
+<div id="content">
+  <div class="site header">
+    <h1>Vodo.net</h1>
+  </div>
+  <dl class="torrents">
+  </dl>
 
+</div>
 
 
 </body>
