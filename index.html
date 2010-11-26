@@ -57,11 +57,13 @@
 
       <div class="content">
         <h1><a href="${link[0].href}">${title}</a></h1>
-        {{html content.content}}
+        <div class="body">
+          {{html content.content}}
+        </div>
       </div>
 
       <div class="meta">
-        <p class="time">${(published).substring(0,10)}</p>
+        <p class="time" title="${published}">${(published).substring(0,10)}</p>
         <p class="download"><a href="${link[1].href}">Download</a></p>
 
         <dl class="specs">
