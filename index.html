@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- by Peng Zhong -->
   <meta charset="utf-8" />
-  <title>vodo.net rss</title>
+  <title>vodo</title>
   <link type="text/css" rel="stylesheet" href="css/screen.css" />
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -16,9 +17,11 @@
           $('#torrentData').tmpl(entry).appendTo('dl.torrents');
         });
 
+        // Open an initial torrent page
         $('dl.torrents dt.torrent:first').addClass('active');
         $('dl.torrents dd.torrent:first').addClass('show');
 
+        // How the tabs work
         $('dt.torrent').click(function() {
           $(this).toggleClass('active');
           $(this).next('dd.details').toggleClass('show')
@@ -30,7 +33,15 @@
           $(this).parents('dd.details').toggleClass('show')
             .prev('dt.torrent').removeClass('active');
         });
+
+        // To fix: timeago doesn't work with time format
         $('p.published').timeago();
+      });
+
+      // Scroll to top
+      $('a.top').click(function(){
+        $('html, body').animate({scrollTop: '0px'}, 150);
+        return false;
       });
     });
   </script>
@@ -38,8 +49,8 @@
   <script id="torrentData" type="text/html">
     <dt class="torrent">
       <div class="content">
-        <p class="title">${title}</p>
-        <p class="meta">${(published).substring(0,10)} ${author.name}</p>
+        <p class="title">${(title).substring(0,29)}</p>
+        <p class="meta">${(author.name).substring(0,34)}</p>
       </div>
     </dt>
 
@@ -49,16 +60,14 @@
         <p class="close"><a>Close</a></p>
       </div>
 
-      <h1><a href="${link[0].href}">${title}</a></h1>
-
       <div class="content">
+        <h1><a href="${link[0].href}">${title}</a></h1>
         {{html content.content}}
       </div>
 
       <div class="meta">
-        <p class="download">
-          <a href="${link[1].href}">Download</a>
-        </p>
+        <p class="time">${(published).substring(0,10)}</p>
+        <p class="download"><a href="${link[1].href}">Download</a></p>
         <dl class="specs">
           {{if format.size != null}}
             <dt>Size</dt>
@@ -103,11 +112,17 @@
 <body>
 
 <div id="content">
+
   <div class="site header">
     <h1><a href="http://vodo.net">Vodo</a></h1>
   </div>
-  <dl class="torrents">
-  </dl>
+
+  <dl class="torrents"></dl>
+
+  <div class="site footer">
+    <p id="end">End of entries&mdash;<a class="top" href="#">back to top</a></p>
+    <p id="copy">&copy; <a href="http://nylira.com">Peng Zhong</a></p>
+  </div>
 
 </div>
 

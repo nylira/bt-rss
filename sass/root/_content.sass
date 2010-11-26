@@ -1,5 +1,5 @@
 #content
-  +col($s4)
+  +col($s3)
 
 .site.header
   +bg-linear-gradient($m250,$m230)
@@ -22,10 +22,6 @@
         color: $link
 
 dl.torrents
-  +col($s4)
-  background: #fff
-  +clear
-  position: relative
   dt.torrent
     padding: .75em 0
     border-top: 1px solid $w80
@@ -48,12 +44,12 @@ dl.torrents
       margin-right: 1em
 
     .content
-      padding-left: 1em
+      padding: 0 1em
       p
         &.title
           color: #444
         &.meta
-          font-size: 85%
+          +font(85%)
           color: #999
   
   dd.torrent.details
@@ -61,13 +57,13 @@ dl.torrents
     position: fixed
     min-height: 100%
     top: 0
-    left: -$s4
-    width: $s8
+    left: -$s6
+    width: $s9
     background: #fff
     z-index: -3
     +transition(left .2s ease)
     &.show
-      left: $s4
+      left: $s3
 
     .header
       +bg-linear-gradient($m250,$m240)
@@ -76,7 +72,7 @@ dl.torrents
       padding: 1em 2em
       border-bottom: 1px solid #ddd
       p.title
-        +col($s6 - 2*$m)
+        +col($s7 - 2*$m)
         line-height: 1
         color: #666
       p.close
@@ -84,12 +80,13 @@ dl.torrents
         a
           @extend .button
     h1
+      +col($s7 - 6*$m)
       font: 2em/1 $sans
-      padding: 2*$m
+      padding: 2*$m 0
 
     .content
-      +col($s6 - 4*$m)
-      padding: 0 2em 1em
+      +col($s7 - 6*$m)
+      padding: 0 3em
       height: 530px
       br
         display: none
@@ -105,17 +102,37 @@ dl.torrents
     .meta
       float: left
       width: $s2 - 2*$m
+      padding: 2em 0
+      p.time
+        color: #999
+        line-height: 2em
+        margin: 0 0 2em
 
       p.download
-        margin: 0 0 1em
+        margin: 0 0 1.5em
         a
           @extend .button
 
       dl.specs
         dt
-          border-top: 1px solid #ddd
+          border-top: 1px dashed #ddd
           padding: .75em 0 0
           font-size: 11px
           color: #999
         dd
           padding: 0 0 1em
+
+.site.footer
+  +bg-linear-gradient($m250,$m230)
+  border-right: 1px solid #ddd
+  border-bottom: 1px solid $b15
+  height: 5em
+  padding: .75em 1em
+  p
+    color: #999
+    margin: 0 0 1em
+    &#copy
+      a
+        color: #999
+        &:hover
+          color: $link
