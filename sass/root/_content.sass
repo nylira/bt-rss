@@ -61,7 +61,6 @@ dl.torrents
     width: $s9
     background: #fff
     z-index: -3
-    +transition(left .2s ease)
     &.show
       left: $s3
 
@@ -69,12 +68,12 @@ dl.torrents
       +bg-linear-gradient($m250,$m240)
       +clear
       height: 5em
-      padding: 1em 2em
+      padding: 1em 2em 1em 3em
       border-bottom: 1px solid #ddd
       p.title
-        +col($s7 - 2*$m)
+        +col($s7 - 3*$m)
         line-height: 1
-        color: #666
+        color: #999
       p.close
         +col($s2 - 2*$m)
         a
@@ -98,7 +97,6 @@ dl.torrents
       h3
         margin: $m 0 .5*$m
         
-
     .meta
       float: left
       width: $s2 - 2*$m
