@@ -70,33 +70,33 @@
         <p class="download"><a href="${link[1].href}">Download</a></p>
 
         <dl class="specs">
-          {{if format.size != null}}
+          {{if format.size}}
             <dt>Size</dt>
             <dd class="size">${Math.round(format.size / 1024 / 1024)} MB</dd>
           {{/if}}
 
-          {{if format.duration != null}}
+          {{if format.duration}}
             <dt>Duration</dt>
             <dd class="duration">${Math.round(format.duration / 60)} min.</dd>
           {{/if}}
 
-          {{if format.width != null}}
+          {{if format.width}}
             <dt>Resolution</dt>
             <dd class="resolution" title="${format.pixel_aspect_ratio}">${format.width} &times; ${format.height}</dd>
           {{/if}}
 
-          {{if format.video_bitrate != null}}
+          {{if format.video_bitrate}}
             <dt>Video</dt>
             <dd>
               ${Math.round(format.video_bitrate)} kB/s
-              {{if format.framerate != null}}
+              {{if format.framerate}}
                 ${Math.round(format.framerate)} fps
               {{/if}}
               ${format.video_codec}
           </dd>
           {{/if}}
 
-          {{if format.audio_bitrate != null}}
+          {{if format.audio_bitrate}}
             <dt>Audio</dt>
             <dd>
               ${format.audio_codec}
