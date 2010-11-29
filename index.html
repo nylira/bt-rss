@@ -45,25 +45,27 @@
   
   <script id="torrentData" type="text/html">
     <dt class="torrent">
-      <p class="title">${(title).substring(0,29)}</p>
-      <p class="meta">${(author.name).substring(0,34)}</p>
+      <div class="content">
+        <p class="title">${(title).substring(0,60)}</p>
+        <p class="meta">${(author.name).substring(0,70)}</p>
+      </div>
     </dt>
 
     <dd class="torrent details">
       <div class="header">
-        <p class="author">Torrent by ${author.name}</p>
+        <p class="date">Published ${(published).substring(0,10)}</p>
         <p class="close"><a>Close</a></p>
       </div>
 
       <div class="content">
         <h1><a href="${link[0].href}">${title}</a></h1>
+        <p class="author">Torrent by <span class="name">${author.name}</span></p>
         <div class="body">
           {{html content.content}}
         </div>
       </div>
 
       <div class="meta">
-        <p class="time" title="${published}">${(published).substring(0,10)}</p>
         <p class="download"><a href="${link[1].href}">Download</a></p>
 
         <dl class="specs">
@@ -108,6 +110,10 @@
           {{/if}}
         </dl>
       </div>
+
+      <div class="footer">
+        <p><a href="${link[0].href}">Read more on vodo &raquo;</a></p>
+      </div>
     </dd>
   </script>
 
@@ -123,7 +129,7 @@
   <dl class="torrents"></dl>
 
   <div class="site footer">
-    <p id="end">End of entries&mdash;<a class="top" href="#">back to top</a></p>
+    <p id="end">End of entries&mdash;<a class="top" href="">back to top</a></p>
     <p id="copy">&copy; <a href="http://nylira.com">Peng Zhong</a></p>
   </div>
 

@@ -1,11 +1,13 @@
 #content
-  +col($s3)
+  +col($s6)
 
 .site.header
   +bg-linear-gradient($m250,$m230)
   border-right: 1px solid #ddd
   border-bottom: 1px solid $b15
   height: 7em
+  position: relative
+  z-index: 2
   h1
     a
       display: block
@@ -23,49 +25,82 @@
 
 dl.torrents
   dt.torrent
-    padding: .75em 1em
     border-top: 1px solid $w80
     border-bottom: 1px solid $b14
-    +clear
-    text-shadow: $w60 0 1px 0
+    text-shadow: $w70 0 1px 0
     +bg-linear-gradient($m243,$m232)
     border-right: 1px solid #ddd
+    position: relative
+    z-index: 2
+    +clear
+    &:after
+      content: ">"
+      font: bold 12px/13px $sans
+      color: #666
+      text-shadow: #fff 0 1px 0
+      text-align: center
+      display: block
+      height: 16px
+      width: 16px
+      border: 2px solid #fff
+      +bg-linear-gradient($m240,$m200)
+      +border-radius(9px)
+      +box-shadow
+      position: absolute
+      top: 16px
+      right: 1em
+      opacity: 0
+      +transition(opacity .1s ease)
+
     &:hover
-      p.title
-        color: $link !important
+      &:after
+        opacity: 1
+        color: $link
+
     &.active
       background: #fff
       border-right-color: transparent
+      &:after
+        opacity: 1
       &:hover
-        p.title
-          color: #444 !important
-    p
-      &.title
-        color: #444
-      &.meta
-        +font(85%)
-        color: #999
+        &:after
+          color: #777 !important
+
+    .content
+      padding: .75em 1em
+      p
+        &.title
+          color: #444
+        &.meta
+          +font(85%)
+          color: #999
+    .date
+      padding: .75em 1em
+      color: #999
+      text-align: right
+      
   
   dd.torrent.details
     display: block
     position: fixed
-    min-height: 100%
     top: 0
-    left: -$s6
-    width: $s9
+    left: 0
+    width: $s6
     background: #fff
-    z-index: -3
+    height: 100%
+    +transition(left .3s ease)
+    +border-radius(0 0 5px 0)
     &.show
-      left: $s3
+      left: $s6
 
     .header
       +bg-linear-gradient($m250,$m240)
       +clear
       height: 5em
-      padding: 1em 2em 1em 3em
+      padding: 1em 2em 1em
       border-bottom: 1px solid #ddd
-      p.author
-        +col($s7 - 3*$m)
+      p.date
+        +col($s4 - 2*$m)
         line-height: 1
         color: #999
       p.close
@@ -74,26 +109,35 @@ dl.torrents
           @extend .button
 
     .content
-      +col($s7 - 6*$m)
-      padding: 0 3em 2em
+      +col($s4 - 4*$m)
+      padding: 0 2em 2em
 
       h1
         font: 2em/1 $sans
-        padding: 2*$m 0
-      br
-        display: none
-      p
-        margin: 0 0 1em
-      h2
-        +font(150%)
+        padding: 2*$m 0 0
+      p.author
         color: #999
-        border-bottom: 1px dashed #ddd
-        margin: 2*$m 0 $m
-      h3
-        margin: 2*$m 0 $m
-        text-transform: uppercase
-        letter-spacing: 2px
-        color: #999
+        margin: 0 0 $m
+        span.name
+          font-weight: bold
+
+      .body
+        text-overflow: ellipsis
+        height: 400px
+        br
+          display: none
+        p
+          margin: 0 0 1em
+        h2
+          +font(150%)
+          color: #999
+          border-bottom: 1px dashed #ddd
+          margin: 2*$m 0 $m
+        h3
+          margin: 2*$m 0 $m
+          text-transform: uppercase
+          letter-spacing: 2px
+          color: #999
         
     .meta
       float: left
@@ -135,6 +179,23 @@ dl.torrents
             +text-stroke
             background: $link
             +border-radius
+    .footer
+      clear: both
+      position: absolute
+      bottom: 0
+      width: $s6
+      +bg-linear-gradient($w1,#fff)
+      border-bottom: 1px solid $b15
+      p
+        margin: 3em 2em 1em
+        a
+          @extend .button
+          width: $s3
+          font-weight: bold
+          line-height: 3em
+          color: #666
+          &:hover
+            color: $link
         
 .site.footer
   +bg-linear-gradient($m250,$m230)
