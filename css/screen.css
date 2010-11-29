@@ -103,39 +103,6 @@ body {
   .button img, #content dl.torrents dd.torrent.details .header p.close a img, #content dl.torrents dd.torrent.details .footer p a img {
     vertical-align: middle; }
 
-.button, #content dl.torrents dd.torrent.details .header p.close a, #content dl.torrents dd.torrent.details .footer p a {
-  display: block;
-  margin: 0;
-  padding: 0 0.6em;
-  font: 1em/1.8 "Helvetica Neue", Arial, Helvetica, sans-serif;
-  text-align: center;
-  text-shadow: #fff 0 1px 0;
-  color: #1b1b1b;
-  border: 1px solid #fff;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  background: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f5f5f5));
-  background: -moz-linear-gradient(white, #f5f5f5);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5')";
-  *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5');
-  -moz-box-shadow: #000 0 0 1px;
-  -webkit-box-shadow: #000 0 0 1px;
-  -o-box-shadow: #000 0 0 1px;
-  box-shadow: #000 0 0 1px;
-  cursor: pointer; }
-  .button:active, #content dl.torrents dd.torrent.details .header p.close a:active, #content dl.torrents dd.torrent.details .footer p a:active {
-    border-color: #00bbff; }
-  .button:hover, #content dl.torrents dd.torrent.details .header p.close a:hover, #content dl.torrents dd.torrent.details .footer p a:hover {
-    background: white;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));
-    background: -moz-linear-gradient(white, #ebebeb);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb')";
-    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb'); }
-  .button img, #content dl.torrents dd.torrent.details .header p.close a img, #content dl.torrents dd.torrent.details .footer p a img {
-    vertical-align: middle; }
-
 #content {
   width: 480px;
   float: left; }
