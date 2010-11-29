@@ -1,1 +1,405 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after{content:"";content:none}q:before,q:after{content:"";content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}img{vertical-align:bottom}header,nav,section,article,aside,footer{display:block}strong{font-weight:bold}em{font-style:italic}.cnt{width:960px;margin:0 auto}.cnt:after{clear:both;display:block;content:"\0020"}@import url(mixins/markup.css);a{color:#0bf;text-decoration:none}a:hover{color:#66d6ff}html{overflow-y:scroll}body{font:13px "Helvetica Neue", Arial, Helvetica, sans-serif;line-height:150%;color:#1b1b1b;background:#333}.button,#content dl.torrents dd.torrent.details .header p.close a,#content dl.torrents dd.torrent.details .footer p a{display:block;margin:0;padding:0 0.6em;font:1em/1.8 "Helvetica Neue", Arial, Helvetica, sans-serif;text-align:center;text-shadow:#fff 0 1px 0;color:#1b1b1b;border:1px solid #fff;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background:white;background:-webkit-gradient(linear, left top, left bottom, from(white), to(#f5f5f5));background:-moz-linear-gradient(white, #f5f5f5);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5');-moz-box-shadow:#000 0 0 1px;-webkit-box-shadow:#000 0 0 1px;-o-box-shadow:#000 0 0 1px;box-shadow:#000 0 0 1px;cursor:pointer}.button:active,#content dl.torrents dd.torrent.details .header p.close a:active,#content dl.torrents dd.torrent.details .footer p a:active{border-color:#0bf}.button:hover,#content dl.torrents dd.torrent.details .header p.close a:hover,#content dl.torrents dd.torrent.details .footer p a:hover{background:white;background:-webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));background:-moz-linear-gradient(white, #ebebeb);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb')}.button img,#content dl.torrents dd.torrent.details .header p.close a img,#content dl.torrents dd.torrent.details .footer p a img{vertical-align:middle}#content{width:480px;float:left}#content .site.header{background:#fafafa;background:-webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#e6e6e6));background:-moz-linear-gradient(#fafafa, #e6e6e6);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6');border-right:1px solid #ddd;border-bottom:1px solid rgba(0, 0, 0, 0.15);height:7em;position:relative;z-index:2}#content .site.header h1 a{display:block;padding:13px;height:65px;text-transform:lowercase;color:#999;font:3em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;letter-spacing:1px;-webkit-text-stroke:0.1px transparent;text-shadow:rgba(255, 255, 255, 0.5) 0 2px 0;text-align:center}#content .site.header h1 a:hover{color:#0bf}#content dl.torrents dt.torrent{border-top:1px solid rgba(255, 255, 255, 0.8);border-bottom:1px solid rgba(0, 0, 0, 0.14);text-shadow:rgba(255, 255, 255, 0.7) 0 1px 0;background:#f3f3f3;background:-webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#e8e8e8));background:-moz-linear-gradient(#f3f3f3, #e8e8e8);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#e8e8e8')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#e8e8e8');border-right:1px solid #ddd;position:relative;z-index:3;overflow:hidden}#content dl.torrents dt.torrent:after{clear:both;display:block;content:"\0020"}#content dl.torrents dt.torrent:after{content:">";font:bold 12px/13px "Helvetica Neue", Arial, Helvetica, sans-serif;color:#666;text-shadow:#fff 0 1px 0;text-align:center;display:block;height:16px;width:16px;border:2px solid #fff;background:#f0f0f0;background:-webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#c8c8c8));background:-moz-linear-gradient(#f0f0f0, #c8c8c8);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f0f0', EndColorStr='#c8c8c8')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f0f0', EndColorStr='#c8c8c8');-moz-border-radius:9px;-webkit-border-radius:9px;border-radius:9px;-moz-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;-webkit-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;-o-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;position:absolute;top:16px;right:1em;opacity:0;transition:opacity 0.1s ease;-webkit-transition:opacity 0.1s ease;-moz-transition:opacity 0.1s ease;-o-transition:opacity 0.1s ease}#content dl.torrents dt.torrent:hover .date{opacity:0}#content dl.torrents dt.torrent:hover:after{opacity:1;color:#0bf}#content dl.torrents dt.torrent.active{background:#fff;border-right-color:transparent}#content dl.torrents dt.torrent.active .date{opacity:0}#content dl.torrents dt.torrent.active:after{opacity:1}#content dl.torrents dt.torrent.active:hover:after{color:#777 !important}#content dl.torrents dt.torrent .content{padding:0.75em 1em;width:374px;float:left}#content dl.torrents dt.torrent .content p.title{color:#444}#content dl.torrents dt.torrent .content p.meta{font:85% "Helvetica Neue", Arial, Helvetica, sans-serif;line-height:150%;color:#1b1b1b;color:#999}#content dl.torrents dt.torrent .date{padding:9.75px 13px 0 0;width:66px;float:left;font-size:11px;color:#aaa;text-align:right}#content dl.torrents dd.torrent.details{display:block;position:fixed;top:0;left:0;width:480px;background:#fff;height:100%;transition:left 0.3s ease;-webkit-transition:left 0.3s ease;-moz-transition:left 0.3s ease;-o-transition:left 0.3s ease;-moz-border-radius:0 0 5px 0;-webkit-border-radius:0 0 5px 0;border-radius:0 0 5px 0}#content dl.torrents dd.torrent.details.show{left:480px}#content dl.torrents dd.torrent.details .header{background:#fafafa;background:-webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f0f0f0));background:-moz-linear-gradient(#fafafa, #f0f0f0);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0');height:5em;padding:1em 2em 1em;border-bottom:1px solid #ddd}#content dl.torrents dd.torrent.details .header:after{clear:both;display:block;content:"\0020"}#content dl.torrents dd.torrent.details .header p.date{width:294px;float:left;line-height:1;color:#999}#content dl.torrents dd.torrent.details .header p.close{width:134px;float:left}#content dl.torrents dd.torrent.details .content{width:268px;float:left;padding:0 2em 2em}#content dl.torrents dd.torrent.details .content h1{font:2em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;padding:26px 0 0}#content dl.torrents dd.torrent.details .content p.author{color:#999;margin:0 0 13px}#content dl.torrents dd.torrent.details .content p.author span.name{font-weight:bold}#content dl.torrents dd.torrent.details .content .body{text-overflow:ellipsis;height:400px}#content dl.torrents dd.torrent.details .content .body br{display:none}#content dl.torrents dd.torrent.details .content .body p{margin:0 0 1em}#content dl.torrents dd.torrent.details .content .body h2{font:150% "Helvetica Neue", Arial, Helvetica, sans-serif;line-height:150%;color:#1b1b1b;color:#999;border-bottom:1px dashed #ddd;margin:26px 0 13px}#content dl.torrents dd.torrent.details .content .body h3{margin:26px 0 13px;text-transform:uppercase;letter-spacing:2px;color:#999}#content dl.torrents dd.torrent.details .meta{float:left;width:134px;padding:2em 0}#content dl.torrents dd.torrent.details .meta p.time{color:#999;line-height:2em;margin:0 0 2em}#content dl.torrents dd.torrent.details .meta p.download{margin:0 0 2em;background:#78e600;background:-webkit-gradient(linear, left top, left bottom, from(#78e600), to(#59aa00));background:-moz-linear-gradient(#78e600, #59aa00);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#78e600', EndColorStr='#59aa00')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#78e600', EndColorStr='#59aa00');border:1px solid rgba(35,150,0,0.7);-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;-webkit-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;-o-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px;box-shadow:rgba(0, 0, 0, 0.2) 0 1px 2px}#content dl.torrents dd.torrent.details .meta p.download a{display:block;font:bold 150%/2 "Helvetica Neue", Arial, Helvetica, sans-serif;color:#fff;text-align:center;text-shadow:rgba(0, 0, 0, 0.4) 0 0 3px;border:1px solid rgba(255, 255, 255, 0.2);-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}#content dl.torrents dd.torrent.details .meta dl.specs dt{border-top:1px dashed #ddd;padding:0.75em 0 0;font-size:11px;color:#999}#content dl.torrents dd.torrent.details .meta dl.specs dd{margin:0 0 1em}#content dl.torrents dd.torrent.details .meta dl.specs dd.size,#content dl.torrents dd.torrent.details .meta dl.specs dd.resolution,#content dl.torrents dd.torrent.details .meta dl.specs dd.duration{font:bold 150%/2 "Helvetica Neue", Arial, Helvetica, sans-serif;color:#e5f8ff;text-align:center;-webkit-text-stroke:0.1px transparent;background:#1ac2ff;background:-webkit-gradient(linear, left top, left bottom, from(#1ac2ff), to(#4dcfff));background:-moz-linear-gradient(#1ac2ff, #4dcfff);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#1ac2ff', EndColorStr='#4dcfff')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#1ac2ff', EndColorStr='#4dcfff');-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}#content dl.torrents dd.torrent.details .footer{clear:both;position:absolute;bottom:0;width:480px;background:rgba(255, 255, 255, 0.01);background:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.01)), to(#fff));background:-moz-linear-gradient(rgba(255, 255, 255, 0.01), #fff);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(255, 255, 255, 0.01)', EndColorStr='#fff')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(255, 255, 255, 0.01)', EndColorStr='#fff');border-bottom:1px solid rgba(0, 0, 0, 0.15)}#content dl.torrents dd.torrent.details .footer p{margin:3em 2em 1em}#content dl.torrents dd.torrent.details .footer p a{width:240px;font-weight:bold;line-height:3em;color:#666}#content dl.torrents dd.torrent.details .footer p a:hover{color:#0bf}#content .site.footer{background:#fafafa;background:-webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#e6e6e6));background:-moz-linear-gradient(#fafafa, #e6e6e6);-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6')";*filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6');border-right:1px solid #ddd;border-bottom:1px solid rgba(0, 0, 0, 0.15);height:5em;padding:0.75em 1em}#content .site.footer p{color:#999;margin:0 0 1em}#content .site.footer p#copy a{color:#999}#content .site.footer p#copy a:hover{color:#0bf}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+:focus {
+  outline: 0; }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  vertical-align: bottom; }
+
+header, nav, section, article, aside, footer {
+  display: block; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+.cnt {
+  width: 960px;
+  margin: 0 auto; }
+  .cnt:after {
+    clear: both;
+    display: block;
+    content: "\0020"; }
+
+@import url(mixins/markup.css);
+a {
+  color: #00bbff;
+  text-decoration: none; }
+  a:hover {
+    color: #66d6ff; }
+
+html {
+  overflow-y: scroll; }
+
+body {
+  font: 13px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  line-height: 150%;
+  color: #1b1b1b;
+  background: #333333; }
+
+.button, #content dl.torrents dd.torrent.details .header p.close a, #content dl.torrents dd.torrent.details .footer p a {
+  display: block;
+  margin: 0;
+  padding: 0 0.6em;
+  font: 1em/1.8 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: white 0 1px 0;
+  color: #1b1b1b;
+  border: 1px solid white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f5f5f5));
+  background: -moz-linear-gradient(white, #f5f5f5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5')";
+  *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5');
+  -moz-box-shadow: black 0 0 1px;
+  -webkit-box-shadow: black 0 0 1px;
+  -o-box-shadow: black 0 0 1px;
+  box-shadow: black 0 0 1px;
+  cursor: pointer; }
+  .button:active, #content dl.torrents dd.torrent.details .header p.close a:active, #content dl.torrents dd.torrent.details .footer p a:active {
+    border-color: #00bbff; }
+  .button:hover, #content dl.torrents dd.torrent.details .header p.close a:hover, #content dl.torrents dd.torrent.details .footer p a:hover {
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));
+    background: -moz-linear-gradient(white, #ebebeb);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb'); }
+  .button img, #content dl.torrents dd.torrent.details .header p.close a img, #content dl.torrents dd.torrent.details .footer p a img {
+    vertical-align: middle; }
+
+.button, #content dl.torrents dd.torrent.details .header p.close a, #content dl.torrents dd.torrent.details .footer p a {
+  display: block;
+  margin: 0;
+  padding: 0 0.6em;
+  font: 1em/1.8 "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-shadow: #fff 0 1px 0;
+  color: #1b1b1b;
+  border: 1px solid #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f5f5f5));
+  background: -moz-linear-gradient(white, #f5f5f5);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5')";
+  *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#f5f5f5');
+  -moz-box-shadow: #000 0 0 1px;
+  -webkit-box-shadow: #000 0 0 1px;
+  -o-box-shadow: #000 0 0 1px;
+  box-shadow: #000 0 0 1px;
+  cursor: pointer; }
+  .button:active, #content dl.torrents dd.torrent.details .header p.close a:active, #content dl.torrents dd.torrent.details .footer p a:active {
+    border-color: #00bbff; }
+  .button:hover, #content dl.torrents dd.torrent.details .header p.close a:hover, #content dl.torrents dd.torrent.details .footer p a:hover {
+    background: white;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));
+    background: -moz-linear-gradient(white, #ebebeb);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#ebebeb'); }
+  .button img, #content dl.torrents dd.torrent.details .header p.close a img, #content dl.torrents dd.torrent.details .footer p a img {
+    vertical-align: middle; }
+
+#content {
+  width: 480px;
+  float: left; }
+  #content .site.header {
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#e6e6e6));
+    background: -moz-linear-gradient(#fafafa, #e6e6e6);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6');
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 7em;
+    position: relative;
+    z-index: 3; }
+    #content .site.header h1 a {
+      display: block;
+      padding: 13px;
+      height: 65px;
+      text-transform: lowercase;
+      color: #999999;
+      font: 3em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+      letter-spacing: 1px;
+      -webkit-text-stroke: 0.1px transparent;
+      text-shadow: rgba(255, 255, 255, 0.5) 0 2px 0;
+      text-align: center; }
+      #content .site.header h1 a:hover {
+        color: #00bbff; }
+  #content dl.torrents dt.torrent {
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0;
+    background: #f3f3f3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#e8e8e8));
+    background: -moz-linear-gradient(#f3f3f3, #e8e8e8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#e8e8e8')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#e8e8e8');
+    border-right: 1px solid #dddddd;
+    position: relative;
+    z-index: 3;
+    overflow: hidden; }
+    #content dl.torrents dt.torrent:after {
+      clear: both;
+      display: block;
+      content: "\0020"; }
+    #content dl.torrents dt.torrent:after {
+      content: ">";
+      font: bold 12px/13px "Helvetica Neue", Arial, Helvetica, sans-serif;
+      color: #666666;
+      text-shadow: white 0 1px 0;
+      text-align: center;
+      display: block;
+      height: 16px;
+      width: 16px;
+      border: 2px solid white;
+      background: #f0f0f0;
+      background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#c8c8c8));
+      background: -moz-linear-gradient(#f0f0f0, #c8c8c8);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f0f0', EndColorStr='#c8c8c8')";
+      *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f0f0f0', EndColorStr='#c8c8c8');
+      -moz-border-radius: 9px;
+      -webkit-border-radius: 9px;
+      border-radius: 9px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+      -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+      position: absolute;
+      top: 16px;
+      right: 1em;
+      opacity: 0;
+      transition: opacity 0.1s ease;
+      -webkit-transition: opacity 0.1s ease;
+      -moz-transition: opacity 0.1s ease;
+      -o-transition: opacity 0.1s ease; }
+    #content dl.torrents dt.torrent:hover .date {
+      opacity: 0; }
+    #content dl.torrents dt.torrent:hover:after {
+      opacity: 1;
+      color: #00bbff; }
+    #content dl.torrents dt.torrent.active {
+      background: white;
+      border-right-color: transparent; }
+      #content dl.torrents dt.torrent.active .date {
+        opacity: 0; }
+      #content dl.torrents dt.torrent.active:after {
+        opacity: 1; }
+      #content dl.torrents dt.torrent.active:hover:after {
+        color: #777777 !important; }
+    #content dl.torrents dt.torrent .content {
+      padding: 0.75em 1em;
+      width: 374px;
+      float: left; }
+      #content dl.torrents dt.torrent .content p.title {
+        color: #444444; }
+      #content dl.torrents dt.torrent .content p.meta {
+        font: 85% "Helvetica Neue", Arial, Helvetica, sans-serif;
+        line-height: 150%;
+        color: #1b1b1b;
+        color: #999999; }
+    #content dl.torrents dt.torrent .date {
+      padding: 9.75px 13px 0 0;
+      width: 66px;
+      float: left;
+      font-size: 11px;
+      color: #aaaaaa;
+      text-align: right; }
+  #content dl.torrents dd.torrent.details {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 480px;
+    background: white;
+    height: 100%;
+    transition: left 0.3s ease;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    -moz-border-radius: 0 0 5px 0;
+    -webkit-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0; }
+    #content dl.torrents dd.torrent.details.show {
+      left: 480px; }
+    #content dl.torrents dd.torrent.details .header {
+      background: #fafafa;
+      background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#f0f0f0));
+      background: -moz-linear-gradient(#fafafa, #f0f0f0);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0')";
+      *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#f0f0f0');
+      height: 5em;
+      padding: 1em 2em 1em;
+      border-bottom: 1px solid #dddddd; }
+      #content dl.torrents dd.torrent.details .header:after {
+        clear: both;
+        display: block;
+        content: "\0020"; }
+      #content dl.torrents dd.torrent.details .header p.date {
+        width: 294px;
+        float: left;
+        line-height: 1;
+        color: #999999; }
+      #content dl.torrents dd.torrent.details .header p.close {
+        width: 134px;
+        float: left; }
+    #content dl.torrents dd.torrent.details .content {
+      width: 268px;
+      float: left;
+      padding: 0 2em 2em; }
+      #content dl.torrents dd.torrent.details .content h1 {
+        font: 2em/1 "Helvetica Neue", Arial, Helvetica, sans-serif;
+        padding: 26px 0 0; }
+      #content dl.torrents dd.torrent.details .content p.author {
+        color: #999999;
+        margin: 0 0 13px; }
+        #content dl.torrents dd.torrent.details .content p.author span.name {
+          font-weight: bold; }
+      #content dl.torrents dd.torrent.details .content .body {
+        text-overflow: ellipsis;
+        height: 400px; }
+        #content dl.torrents dd.torrent.details .content .body br {
+          display: none; }
+        #content dl.torrents dd.torrent.details .content .body p {
+          margin: 0 0 1em; }
+        #content dl.torrents dd.torrent.details .content .body h2 {
+          font: 150% "Helvetica Neue", Arial, Helvetica, sans-serif;
+          line-height: 150%;
+          color: #1b1b1b;
+          color: #999999;
+          border-bottom: 1px dashed #dddddd;
+          margin: 26px 0 13px; }
+        #content dl.torrents dd.torrent.details .content .body h3 {
+          margin: 26px 0 13px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #999999; }
+    #content dl.torrents dd.torrent.details .meta {
+      float: left;
+      width: 134px;
+      padding: 2em 0; }
+      #content dl.torrents dd.torrent.details .meta p.time {
+        color: #999999;
+        line-height: 2em;
+        margin: 0 0 2em; }
+      #content dl.torrents dd.torrent.details .meta p.download {
+        margin: 0 0 2em;
+        background: #78e600;
+        background: -webkit-gradient(linear, left top, left bottom, from(#78e600), to(#59aa00));
+        background: -moz-linear-gradient(#78e600, #59aa00);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#78e600', EndColorStr='#59aa00')";
+        *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#78e600', EndColorStr='#59aa00');
+        border: 1px solid rgba(35, 150, 0, 0.7);
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px; }
+        #content dl.torrents dd.torrent.details .meta p.download a {
+          display: block;
+          font: bold 150%/2 "Helvetica Neue", Arial, Helvetica, sans-serif;
+          color: white;
+          text-align: center;
+          text-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          border-radius: 4px; }
+      #content dl.torrents dd.torrent.details .meta dl.specs dt {
+        border-top: 1px dashed #dddddd;
+        padding: 0.75em 0 0;
+        font-size: 11px;
+        color: #999999; }
+      #content dl.torrents dd.torrent.details .meta dl.specs dd {
+        margin: 0 0 1em; }
+        #content dl.torrents dd.torrent.details .meta dl.specs dd.size, #content dl.torrents dd.torrent.details .meta dl.specs dd.resolution, #content dl.torrents dd.torrent.details .meta dl.specs dd.duration {
+          font: bold 150%/2 "Helvetica Neue", Arial, Helvetica, sans-serif;
+          color: #f0fbff;
+          text-align: center;
+          -webkit-text-stroke: 0.1px transparent;
+          background: #1ac2ff;
+          background: -webkit-gradient(linear, left top, left bottom, from(#1ac2ff), to(#4dcfff));
+          background: -moz-linear-gradient(#1ac2ff, #4dcfff);
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#1ac2ff', EndColorStr='#4dcfff')";
+          *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#1ac2ff', EndColorStr='#4dcfff');
+          -moz-border-radius: 5px;
+          -webkit-border-radius: 5px;
+          border-radius: 5px; }
+    #content dl.torrents dd.torrent.details .footer {
+      clear: both;
+      position: absolute;
+      bottom: 0;
+      width: 480px;
+      background: rgba(255, 255, 255, 0.01);
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.01)), to(white));
+      background: -moz-linear-gradient(rgba(255, 255, 255, 0.01), white);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(255, 255, 255, 0.01)', EndColorStr='white')";
+      *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='rgba(255, 255, 255, 0.01)', EndColorStr='white');
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+      #content dl.torrents dd.torrent.details .footer p {
+        margin: 3em 2em 1em; }
+        #content dl.torrents dd.torrent.details .footer p a {
+          width: 240px;
+          font-weight: bold;
+          line-height: 3em;
+          color: #666666; }
+          #content dl.torrents dd.torrent.details .footer p a:hover {
+            color: #00bbff; }
+  #content .site.footer {
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#e6e6e6));
+    background: -moz-linear-gradient(#fafafa, #e6e6e6);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6')";
+    *filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#e6e6e6');
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    height: 5em;
+    padding: 0.75em 1em;
+    position: relative;
+    z-index: 3; }
+    #content .site.footer p {
+      color: #999999;
+      margin: 0 0 1em; }
+      #content .site.footer p#copy a {
+        color: #999999; }
+        #content .site.footer p#copy a:hover {
+          color: #00bbff; }

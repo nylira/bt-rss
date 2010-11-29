@@ -6,7 +6,7 @@
     border-bottom: 1px solid $b15
     height: 7em
     position: relative
-    z-index: 2
+    z-index: 3
     h1
       a
         display: block
@@ -181,7 +181,7 @@
 
             &.size, &.resolution, &.duration
               font: bold 150%/2 $sans
-              color: hsl($hue,100,95)
+              color: hsl($hue,100,97)
               text-align: center
               +text-stroke
               +bg-linear-gradient(hsl($hue,100,55),hsl($hue,100,65))
@@ -210,6 +210,8 @@
     border-bottom: 1px solid $b15
     height: 5em
     padding: .75em 1em
+    position: relative
+    z-index: 3
     p
       color: #999
       margin: 0 0 1em
