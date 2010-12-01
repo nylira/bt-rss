@@ -16,7 +16,7 @@
         color: #999
         font: 3em/1.5 $sans
         letter-spacing: 1px
-        +text-stroke
+        +text-smoothing
         text-shadow: $w50 0 2px 0
         text-align: center
         &:hover
@@ -131,8 +131,6 @@
         .body
           text-overflow: ellipsis
           height: 400px
-          br
-            display: none
           p
             margin: 0 0 1em
           h2
@@ -183,7 +181,7 @@
               font: bold 150%/2 $sans
               color: hsl($hue,100,97)
               text-align: center
-              +text-stroke
+              +text-smoothing
               +bg-linear-gradient(hsl($hue,100,55),hsl($hue,100,65))
               +border-radius
       .footer
